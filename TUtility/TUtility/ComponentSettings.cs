@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                     for (int i = 0; i < dataGridView.Rows.Count - 1; i++)
                     {
                         ProcedureDefinition procedureDefinition = new ProcedureDefinition();
-                        if (database.SelectedItem == null || schema.SelectedItem == null || procedure.Text == null ||
+                        if (database.SelectedItem == null || schema.SelectedItem == null || procedure.Text == "" ||
                             dataGridView.Rows[i].Cells["ParamName"].Value == null ||
                             dataGridView.Rows[i].Cells["ParamType"].Value == null ||
                             dataGridView.Rows[i].Cells["order"].Value == null ||
