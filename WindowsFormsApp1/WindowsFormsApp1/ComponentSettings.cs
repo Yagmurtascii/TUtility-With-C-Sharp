@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
                             dataGridView.Rows[i].Cells["Status"].Value == null ||
                             dataGridView.Rows[i].Cells["InOutOrder"].Value == null)
                         {
-                            MessageBox.Show("Lütfen boş alan bırakmayın");
+                            MessageBox.Show("Please enter values in the fields");
                             return;
                         }
                         else
@@ -60,18 +60,18 @@ namespace WindowsFormsApp1
                     if (count > 0)
                     {
                         transaction.Commit();
-                        MessageBox.Show("Eklendi");
+                        MessageBox.Show("Record added to database");
 
 
                     }
                     else
-                        MessageBox.Show("Lütfen boş alan bırakmayın");
+                        MessageBox.Show("Please enter values in the fields");
 
                 }
                 catch (Exception e)
                 {
                     transaction.Rollback();
-                    MessageBox.Show("Eklenemedi");
+                    MessageBox.Show("The record could not be added to the database. Please check the values entered in the fields.");
                 }
 
             }
